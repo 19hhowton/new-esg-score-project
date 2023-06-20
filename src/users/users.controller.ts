@@ -14,12 +14,18 @@ import {
 import { CreateUserDto } from './dtos/create-user.dto';
 import { UsersService } from './users.service';
 import { UpdateUserDto } from './dtos/update-user.dto';
-import { Serialize } from 'src/interceptors/serialize.interceptor';
 import { UserDto } from './dtos/user.dto';
 import { AuthService } from './auth.service';
 import { CurrentUser } from './decorators/current-user.decorator';
 import { User } from './user.entity';
+
+// // Uncomment before running "npm run test:e2e"
+// import { AuthGuard } from 'C:/Users/heath/CSpCloud/H_Workspace/NestJS_Udemy/new-esg-score-project/src/guards/auth.guard';
+// import { Serialize } from 'C:/Users/heath/CSpCloud/H_Workspace/NestJS_Udemy/new-esg-score-project/src/interceptors/serialize.interceptor';
+
+// Uncomment before running "npm run start:dev"
 import { AuthGuard } from 'src/guards/auth.guard';
+import { Serialize } from 'src/interceptors/serialize.interceptor';
 
 @Controller('auth')
 @Serialize(UserDto)
