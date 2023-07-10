@@ -19,13 +19,13 @@ import { AuthService } from './auth.service';
 import { CurrentUser } from './decorators/current-user.decorator';
 import { User } from './user.entity';
 
-// // Uncomment before running "npm run test:e2e"
-// import { AuthGuard } from 'C:/Users/heath/CSpCloud/H_Workspace/NestJS_Udemy/new-esg-score-project/src/guards/auth.guard';
-// import { Serialize } from 'C:/Users/heath/CSpCloud/H_Workspace/NestJS_Udemy/new-esg-score-project/src/interceptors/serialize.interceptor';
-
-// Uncomment before running "npm run start:dev"
+// Uncomment for application
 import { AuthGuard } from 'src/guards/auth.guard';
 import { Serialize } from 'src/interceptors/serialize.interceptor';
+
+// Uncomment for testing purposes
+// import { AuthGuard } from '../../src/guards/auth.guard';
+// import { Serialize } from '../../src/interceptors/serialize.interceptor';
 
 @Controller('auth')
 @Serialize(UserDto)
