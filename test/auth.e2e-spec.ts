@@ -16,7 +16,7 @@ describe('Authentication System (e2e)', () => {
   });
 
   it('handles a signup request', () => {
-    const email = 'test@gmail.com';
+    const email = 'test123@gmail.com';
     return request(app.getHttpServer())
       .get('/auth/signup')
       .send({
