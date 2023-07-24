@@ -20,12 +20,12 @@ import { CurrentUser } from './decorators/current-user.decorator';
 import { User } from './user.entity';
 
 // Uncomment for application
-// import { AuthGuard } from 'src/guards/auth.guard';
-// import { Serialize } from 'src/interceptors/serialize.interceptor';
+import { AuthGuard } from 'src/guards/auth.guard';
+import { Serialize } from 'src/interceptors/serialize.interceptor';
 
 // Uncomment for testing purposes
-import { AuthGuard } from '../../src/guards/auth.guard';
-import { Serialize } from '../../src/interceptors/serialize.interceptor';
+// import { AuthGuard } from '../../src/guards/auth.guard';
+// import { Serialize } from '../../src/interceptors/serialize.interceptor';
 
 @Controller('auth')
 @Serialize(UserDto)
