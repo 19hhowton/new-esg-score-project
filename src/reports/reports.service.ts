@@ -11,7 +11,8 @@ export class ReportsService {
 
   create(reportDto: CreateReportDto, user: User) {
     const report = this.repo.create(reportDto);
-    // report.user = user;
+    // This associates the user with the report's user column.
+    report.user = user;
     return this.repo.save(report);
   }
 }
